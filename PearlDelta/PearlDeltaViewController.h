@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CityPickerViewController.h"
 
-@interface PearlDeltaViewController : UIViewController
+@interface PearlDeltaViewController : UIViewController <CityPickerViewControllerDelegate>
+
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+
+@property (nonatomic, strong) IBOutlet UILabel* departLabel;
+@property (nonatomic, strong) IBOutlet UILabel* arrivalLabel;
+
+@property (nonatomic, strong) IBOutlet UIButton* departButton;
+@property (nonatomic, strong) IBOutlet UIButton* arrivalButton;
+@property (nonatomic, strong) IBOutlet UIButton* doneButton;
+
 
 @end
