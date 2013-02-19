@@ -46,7 +46,12 @@
 		11AB8AB616D13943002BDDA2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AB8AAE16D1393F002BDDA2 /* Icon.png */; };
 		11AB8AB716D13943002BDDA2 /* icon full.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AB8AAF16D13940002BDDA2 /* icon full.png */; };
 		11AB8AB816D13943002BDDA2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AB8AB016D13941002BDDA2 /* iTunesArtwork.png */; };
-		11BC50DC16CC19C70052EDD1 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC50DB16CC19C70052EDD1 /* Station.m */; };
+		11AB8ABC16D1CE94002BDDA2 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AB8ABA16D1CE94002BDDA2 /* splash.png */; };
+		11AB8ABD16D1CE94002BDDA2 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AB8ABB16D1CE94002BDDA2 /* splash@2x.png */; };
+		11AB8AC016D1DDE4002BDDA2 /* StationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8ABF16D1DDE4002BDDA2 /* StationViewController.m */; };
+		11AB8AC316D1E7EF002BDDA2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AB8AC216D1E7EF002BDDA2 /* MapKit.framework */; };
+		11AB8AC516D3355A002BDDA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AB8AC416D3355A002BDDA2 /* CoreLocation.framework */; };
+		11AB8ACB16D3648B002BDDA2 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8ACA16D3648B002BDDA2 /* Station.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,8 +105,14 @@
 		11AB8AAE16D1393F002BDDA2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		11AB8AAF16D13940002BDDA2 /* icon full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon full.png"; sourceTree = "<group>"; };
 		11AB8AB016D13941002BDDA2 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		11BC50DA16CC19C70052EDD1 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
-		11BC50DB16CC19C70052EDD1 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
+		11AB8ABA16D1CE94002BDDA2 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		11AB8ABB16D1CE94002BDDA2 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
+		11AB8ABE16D1DDE4002BDDA2 /* StationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationViewController.h; sourceTree = "<group>"; };
+		11AB8ABF16D1DDE4002BDDA2 /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationViewController.m; sourceTree = "<group>"; };
+		11AB8AC216D1E7EF002BDDA2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		11AB8AC416D3355A002BDDA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		11AB8AC916D3648B002BDDA2 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		11AB8ACA16D3648B002BDDA2 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AB8AC516D3355A002BDDA2 /* CoreLocation.framework in Frameworks */,
+				11AB8AC316D1E7EF002BDDA2 /* MapKit.framework in Frameworks */,
 				1106C9FC16CB91C200B288C7 /* CoreData.framework in Frameworks */,
 				1179B76416C4AAC200146D28 /* UIKit.framework in Frameworks */,
 				1179B76616C4AAC200146D28 /* Foundation.framework in Frameworks */,
@@ -131,8 +144,8 @@
 		1106C9AF16CA2B6800B288C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				11BC50DA16CC19C70052EDD1 /* Station.h */,
-				11BC50DB16CC19C70052EDD1 /* Station.m */,
+				11AB8AC916D3648B002BDDA2 /* Station.h */,
+				11AB8ACA16D3648B002BDDA2 /* Station.m */,
 				11AB8A9316D0E968002BDDA2 /* Route.h */,
 				11AB8A9416D0E968002BDDA2 /* Route.m */,
 				1164750D16CBD601007C21F3 /* Operator.h */,
@@ -146,13 +159,14 @@
 		1179B75716C4AAC200146D28 = {
 			isa = PBXGroup;
 			children = (
-				11AB8AB916D13949002BDDA2 /* Icon */,
 				1179B77216C4AAC200146D28 /* PearlDeltaAppDelegate.h */,
 				1179B77316C4AAC200146D28 /* PearlDeltaAppDelegate.m */,
 				1179B77B16C4AAC200146D28 /* MainStoryboard.storyboard */,
 				1106C9B016CA438700B288C7 /* PearlDelta.xcdatamodeld */,
-				11AB8AA616D12C67002BDDA2 /* TravelByIcons */,
+				11AB8AB916D13949002BDDA2 /* Icon */,
+				11AB8AA616D12C67002BDDA2 /* Images */,
 				1106C9AF16CA2B6800B288C7 /* Models */,
+				11AB8AC116D1E5BE002BDDA2 /* StationView */,
 				11AB8A9216CE30D7002BDDA2 /* RouteDetail */,
 				1106C9AE16CA2B5D00B288C7 /* RoutesTable */,
 				1179B78C16C81C0F00146D28 /* CityPicker */,
@@ -174,6 +188,8 @@
 		1179B76216C4AAC200146D28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11AB8AC416D3355A002BDDA2 /* CoreLocation.framework */,
+				11AB8AC216D1E7EF002BDDA2 /* MapKit.framework */,
 				1106C9FB16CB91C200B288C7 /* CoreData.framework */,
 				1179B76316C4AAC200146D28 /* UIKit.framework */,
 				1179B76516C4AAC200146D28 /* Foundation.framework */,
@@ -239,15 +255,17 @@
 			name = RouteDetail;
 			sourceTree = "<group>";
 		};
-		11AB8AA616D12C67002BDDA2 /* TravelByIcons */ = {
+		11AB8AA616D12C67002BDDA2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				11AB8ABA16D1CE94002BDDA2 /* splash.png */,
+				11AB8ABB16D1CE94002BDDA2 /* splash@2x.png */,
 				11AB8A9E16D12C5B002BDDA2 /* ferry@2x.png */,
 				11AB8A9F16D12C5B002BDDA2 /* ferry.png */,
 				11AB8AA016D12C5C002BDDA2 /* train.png */,
 				11AB8AA116D12C5C002BDDA2 /* train@2x.png */,
 			);
-			name = TravelByIcons;
+			name = Images;
 			sourceTree = "<group>";
 		};
 		11AB8AB916D13949002BDDA2 /* Icon */ = {
@@ -263,6 +281,15 @@
 				11AB8AB016D13941002BDDA2 /* iTunesArtwork.png */,
 			);
 			name = Icon;
+			sourceTree = "<group>";
+		};
+		11AB8AC116D1E5BE002BDDA2 /* StationView */ = {
+			isa = PBXGroup;
+			children = (
+				11AB8ABE16D1DDE4002BDDA2 /* StationViewController.h */,
+				11AB8ABF16D1DDE4002BDDA2 /* StationViewController.m */,
+			);
+			name = StationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +369,8 @@
 				11AB8AB616D13943002BDDA2 /* Icon.png in Resources */,
 				11AB8AB716D13943002BDDA2 /* icon full.png in Resources */,
 				11AB8AB816D13943002BDDA2 /* iTunesArtwork.png in Resources */,
+				11AB8ABC16D1CE94002BDDA2 /* splash.png in Resources */,
+				11AB8ABD16D1CE94002BDDA2 /* splash@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,9 +389,10 @@
 				1106C9AA16CA2B1300B288C7 /* RoutesTableViewController.m in Sources */,
 				1106C9B216CA438700B288C7 /* PearlDelta.xcdatamodeld in Sources */,
 				1164750F16CBD601007C21F3 /* Operator.m in Sources */,
-				11BC50DC16CC19C70052EDD1 /* Station.m in Sources */,
 				11AB8A9116CDE5B1002BDDA2 /* RouteDetailViewController.m in Sources */,
 				11AB8A9516D0E968002BDDA2 /* Route.m in Sources */,
+				11AB8AC016D1DDE4002BDDA2 /* StationViewController.m in Sources */,
+				11AB8ACB16D3648B002BDDA2 /* Station.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

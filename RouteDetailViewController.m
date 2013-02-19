@@ -9,6 +9,7 @@
 #import "RouteDetailViewController.h"
 #import "Operator.h"
 #import "Station.h"
+#import "StationViewController.h"
 
 @interface RouteDetailViewController ()
 
@@ -59,6 +60,15 @@
     }
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"stationAddress"]) {
+        StationViewController* stationController = segue.destinationViewController;
+        
+        stationController.managedObjectContext = self.managedObjectContext;
+        stationController.station = sender;
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -99,13 +109,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSLog(@"indexPath: %@", indexPath);
+    NSUInteger section = [indexPath section];
+    NSUInteger row = [indexPath row];
+    
+    switch (section) {
+        case 1:
+            switch (row){
+                case 0: [self performSegueWithIdentifier:@"stationAddress" sender:route.departStation];
+                    break;
+                case 1: [self performSegueWithIdentifier:@"stationAddress" sender:route.arrivalStation];
+                    break;
+            }
+        case 2:
+            switch(row) {
+                case 1:NSLog(@"operator tel clicked:");
+                    break;
+                case 2:NSLog(@"operator web clicked:");
+                    break;
+            }
+    }
 }
+
 
 @end

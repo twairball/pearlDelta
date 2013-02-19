@@ -120,7 +120,7 @@
         NSLog(@"class: %@", [segue.destinationViewController class]);
         
         routeDetail.managedObjectContext = self.managedObjectContext;
-        routeDetail.route = selectedRoute;
+        routeDetail.route = sender;
     }
 }
 
@@ -180,32 +180,47 @@
     [self performSegueWithIdentifier:@"routeDetail" sender:route];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *sectionName;
-    switch (section)
-    {
-        case 0:
-            sectionName = NSLocalizedString(@"渡船", @"渡船");
-            
-            // check if only train routes
-            if ([[_fetchedResultsController sections] count] == 1) {
-                Route* first_route = [_fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-                if ([first_route.travelBy isEqualToString:@"train"]) {
-                    sectionName = NSLocalizedString(@"火車", @"火車");
-                }
-            }
-            break;
-        case 1:
-            sectionName = NSLocalizedString(@"火車", @"火車");
-            break;
-            // ...
-        default:
-            sectionName = @"";
-            break;
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+    NSLog(@"sectInfo name: %@", [sectionInfo name]);
+    
+    NSString* title;
+    if ([[sectionInfo name] isEqualToString:@"train"]) {
+        title = @"火车";
+    } else if ([[sectionInfo name] isEqualToString:@"ferry"]) {
+        title = @"渡船";
+    } else {
+        title = [sectionInfo name];
     }
-    return sectionName;
+    return title;
 }
+
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    NSString *sectionName;
+//    switch (section)
+//    {
+//        case 0:
+//            sectionName = NSLocalizedString(@"渡船", @"渡船");
+//            
+//            // check if only train routes
+//            if ([[_fetchedResultsController sections] count] == 1) {
+//                Route* first_route = [_fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+//                if ([first_route.travelBy isEqualToString:@"train"]) {
+//                    sectionName = NSLocalizedString(@"火車", @"火車");
+//                }
+//            }
+//            break;
+//        case 1:
+//            sectionName = NSLocalizedString(@"火車", @"火車");
+//            break;
+//            // ...
+//        default:
+//            sectionName = @"";
+//            break;
+//    }
+//    return sectionName;
+//}
 
 #pragma mark - Fetched controller delegate
 

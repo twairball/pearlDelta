@@ -21,6 +21,8 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="bus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subway" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="routes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Route" inverseName="departStation" inverseEntity="Route" syncable="YES"/>
@@ -28,6 +30,6 @@
     <elements>
         <element name="Operator" positionX="277" positionY="248" width="128" height="103"/>
         <element name="Route" positionX="16" positionY="126" width="128" height="178"/>
-        <element name="Station" positionX="286" positionY="38" width="128" height="133"/>
+        <element name="Station" positionX="286" positionY="38" width="128" height="163"/>
     </elements>
 </model>

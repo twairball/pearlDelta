@@ -2,7 +2,7 @@
 //  Station.h
 //  PearlDelta
 //
-//  Created by JERRY LIU on 14/2/13.
+//  Created by JERRY LIU on 19/2/13.
 //  Copyright (c) 2013 com.genmk. All rights reserved.
 //
 
@@ -11,13 +11,15 @@
 
 @class Route;
 
-@interface Station : NSManagedObject
+@interface Station : NSManagedObject <MKAnnotation>
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * address;
 @property (nonatomic, retain) NSString * address2;
 @property (nonatomic, retain) NSString * bus;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * subway;
+@property (nonatomic, retain) NSDecimalNumber * latitude;
+@property (nonatomic, retain) NSDecimalNumber * longitude;
 @property (nonatomic, retain) NSSet *routes;
 @end
 
