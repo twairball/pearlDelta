@@ -23,7 +23,11 @@
 
 #pragma mark - MKAnnotation methods
 -(CLLocationCoordinate2D)coordinate {
-    return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
+    if(self.latitude && self.longitude) {
+        return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
+    } else {
+        return CLLocationCoordinate2DMake(22.2997,114.1668); //center on hk china ferry
+    }
 }
 
 -(NSString*)title {
