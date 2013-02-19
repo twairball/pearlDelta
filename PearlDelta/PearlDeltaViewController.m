@@ -106,12 +106,10 @@
 #pragma mark -
 #pragma CityPickerViewControllerDelegate methods
 - (void)cityPickerDidCancel:(CityPickerViewController *)picker {
-    NSLog(@"cityPickerDidCancel");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)cityPicker:(CityPickerViewController *)picker didPickCity:(NSString *)city {
-    NSLog(@"received city: %@, pickingFor: %@", city, picker.pickingFor);
     
     if ([picker.pickingFor isEqualToString:@"departCity"]) {
         trip.departCity = city;

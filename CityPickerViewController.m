@@ -32,10 +32,7 @@
     int startingIndex = 0;
     if (self.pickCity) startingIndex = [self.cities indexOfObject:self.pickCity];
     [self.picker selectRow:startingIndex inComponent:0 animated:NO];
-    NSLog(@"pickCity: %@, index: %d", self.pickCity, startingIndex);
     self.cityLabel.text = self.cities[startingIndex];
-    
-    NSLog(@"delegate: %@", self.delegate);
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,14 +48,10 @@
 
 
 - (void)done {
-    NSLog(@"clicked done");
-    
     [self.delegate cityPicker:self didPickCity:self.pickCity];
 }
 
 - (void)cancel {
-    NSLog(@"clicked cancel");
-    
     [self.delegate cityPickerDidCancel:self];
 }
 
@@ -85,8 +78,6 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     self.pickCity = self.cities[row];
     self.cityLabel.text = self.pickCity;
-    
-    NSLog(@"picker -- pickCity: %@", self.pickCity);
 }
 
 @end

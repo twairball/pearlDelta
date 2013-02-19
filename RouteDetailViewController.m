@@ -75,41 +75,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-/*
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 3;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    int rows = 4;
-    switch (section) {
-        case 0: rows = 3;
-        case 1: rows = 2;
-        case 2: rows = 3;
-    }
-    return rows;
-    
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"indexPath: %@", indexPath);
     NSUInteger section = [indexPath section];
     NSUInteger row = [indexPath row];
     
@@ -123,13 +92,11 @@
             }
         case 2:
             switch(row) {
-                case 1:NSLog(@"operator tel clicked:");
+                case 1:[[UIApplication sharedApplication] openURL:[NSURL URLWithString:route.operator.tel]];
                     break;
-                case 2:NSLog(@"operator web clicked:");
+                case 2:[[UIApplication sharedApplication] openURL:[NSURL URLWithString:route.operator.website]];
                     break;
             }
     }
 }
-
-
 @end

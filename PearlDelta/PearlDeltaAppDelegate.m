@@ -29,18 +29,17 @@
                                               inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     
-    NSError *error;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+//    NSError *error;
+//    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+//    
+//    for (Operator* op in fetchedObjects) {
+//        NSLog(@"Operator:%@, tel:%@, url:%@", op.name, op.tel, op.website);
+//        for (Route *route in op.routes) {
+//            NSLog(@"    Depart: %@ / %@, Arrival: %@ / %@, travelBy: %@, duration: %@", route.departCity, route.departStation.name, route.arrivalCity, route.arrivalStation.name, route.travelBy, route.duration);
+//        }
+//    }
     
-    for (Operator* op in fetchedObjects) {
-        NSLog(@"Operator:%@, tel:%@, url:%@", op.name, op.tel, op.website);
-        for (Route *route in op.routes) {
-            NSLog(@"    Depart: %@ / %@, Arrival: %@ / %@, travelBy: %@, duration: %@", route.departCity, route.departStation.name, route.arrivalCity, route.arrivalStation.name, route.travelBy, route.duration);
-//            for (Schedule* schedule in route.schedules) {
-//                NSLog(@"        depart: %@, arrival: %@", schedule.departTime, schedule.arrivalTime);
-//            }
-        }
-    }
+    
     // pass managedObjectContext;
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     PearlDeltaViewController *controller = (PearlDeltaViewController *)navigationController.topViewController;

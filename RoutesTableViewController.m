@@ -72,8 +72,7 @@
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:@"Route" inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entity];
-    
-    NSLog(@"predicate, departCity == %@ AND arrivalCity == %@", self.departCity, self.arrivalCity);
+ 
     //fetch predicate based on request variables
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"departCity == %@ AND arrivalCity == %@",
                               self.departCity, self.arrivalCity];
@@ -93,8 +92,6 @@
                                         managedObjectContext:managedObjectContext sectionNameKeyPath:@"travelBy"
                                                    cacheName:nil];
     
-    NSLog(@"section index: %@", theFetchedResultsController.sectionIndexTitles);
-    
     self.fetchedResultsController = theFetchedResultsController;
     _fetchedResultsController.delegate = self;
     
@@ -113,11 +110,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"segue: %@", segue.identifier);
     if ([segue.identifier isEqualToString:@"routeDetail"]) {
         
         RouteDetailViewController* routeDetail= segue.destinationViewController;
-        NSLog(@"class: %@", [segue.destinationViewController class]);
         
         routeDetail.managedObjectContext = self.managedObjectContext;
         routeDetail.route = sender;
