@@ -52,6 +52,7 @@
 		11AB8AC316D1E7EF002BDDA2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AB8AC216D1E7EF002BDDA2 /* MapKit.framework */; };
 		11AB8AC516D3355A002BDDA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AB8AC416D3355A002BDDA2 /* CoreLocation.framework */; };
 		11AB8ACB16D3648B002BDDA2 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8ACA16D3648B002BDDA2 /* Station.m */; };
+		11CBE05516D5A64400D3F639 /* PearlDelta.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 11CBE05416D5A5F500D3F639 /* PearlDelta.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		11AB8AC416D3355A002BDDA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		11AB8AC916D3648B002BDDA2 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
 		11AB8ACA16D3648B002BDDA2 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
+		11CBE05416D5A5F500D3F639 /* PearlDelta.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PearlDelta.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				1179B77216C4AAC200146D28 /* PearlDeltaAppDelegate.h */,
 				1179B77316C4AAC200146D28 /* PearlDeltaAppDelegate.m */,
+				11CBE05416D5A5F500D3F639 /* PearlDelta.sqlite */,
 				1179B77B16C4AAC200146D28 /* MainStoryboard.storyboard */,
 				1106C9B016CA438700B288C7 /* PearlDelta.xcdatamodeld */,
 				1106C9AF16CA2B6800B288C7 /* Models */,
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CBE05516D5A64400D3F639 /* PearlDelta.sqlite in Resources */,
 				1179B76E16C4AAC200146D28 /* InfoPlist.strings in Resources */,
 				1179B77616C4AAC200146D28 /* Default.png in Resources */,
 				1179B77816C4AAC200146D28 /* Default@2x.png in Resources */,
@@ -442,6 +446,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PearlDelta/PearlDelta-Prefix.pch";
 				INFOPLIST_FILE = "PearlDelta/PearlDelta-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -453,6 +458,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PearlDelta/PearlDelta-Prefix.pch";
 				INFOPLIST_FILE = "PearlDelta/PearlDelta-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

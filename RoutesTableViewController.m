@@ -177,7 +177,6 @@
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
-    NSLog(@"sectInfo name: %@", [sectionInfo name]);
     
     NSString* title;
     if ([[sectionInfo name] isEqualToString:@"train"]) {
@@ -189,33 +188,6 @@
     }
     return title;
 }
-
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    NSString *sectionName;
-//    switch (section)
-//    {
-//        case 0:
-//            sectionName = NSLocalizedString(@"渡船", @"渡船");
-//            
-//            // check if only train routes
-//            if ([[_fetchedResultsController sections] count] == 1) {
-//                Route* first_route = [_fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-//                if ([first_route.travelBy isEqualToString:@"train"]) {
-//                    sectionName = NSLocalizedString(@"火車", @"火車");
-//                }
-//            }
-//            break;
-//        case 1:
-//            sectionName = NSLocalizedString(@"火車", @"火車");
-//            break;
-//            // ...
-//        default:
-//            sectionName = @"";
-//            break;
-//    }
-//    return sectionName;
-//}
 
 #pragma mark - Fetched controller delegate
 
