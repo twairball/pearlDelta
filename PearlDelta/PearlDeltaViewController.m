@@ -68,9 +68,7 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSLog(@"segue: %@", segue.identifier);
-    
+{    
     if ([segue.identifier isEqualToString:@"departCity"]) {
         CityPickerViewController *cityPicker = segue.destinationViewController;
         cityPicker.delegate = self;
@@ -78,16 +76,12 @@
         cityPicker.pickCity = trip.departCity;
         cityPicker.pickingFor = @"departCity";
         
-        NSLog(@"segue.destinationViewController.delegate: %@", cityPicker.delegate);
-        
     } else if ([segue.identifier isEqualToString:@"arrivalCity"]) {
         CityPickerViewController *cityPicker = segue.destinationViewController;
         cityPicker.delegate = self;
         cityPicker.cities = [trip cityListForArrival];
         cityPicker.pickCity = trip.arrivalCity;
         cityPicker.pickingFor = @"arrivalCity";
-        
-        NSLog(@"segue.destinationViewController.delegate: %@", cityPicker.delegate);
     
     } else if ([segue.identifier isEqualToString:@"findRoutes"]) {
         
@@ -95,9 +89,6 @@
         routesController.departCity = trip.departCity;
         routesController.arrivalCity = trip.arrivalCity;
         routesController.managedObjectContext = self.managedObjectContext;
-        
-        NSLog(@"-train-  controller: %@, departCIty: %@, arrivalCity: %@", routesController, trip.departCity, trip.arrivalCity);
-      
         
     }
     

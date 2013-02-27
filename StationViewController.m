@@ -34,7 +34,10 @@
     nameLabel.text = station.name;
     addressLabel.text = station.address;
     busLabel.text = station.bus;
+    busLabel.numberOfLines = 0;
+    
     subwayLabel.text = station.subway;
+    subwayLabel.numberOfLines = 0;
     
     [self showMap];
     
@@ -61,6 +64,29 @@
     }
 }
 
+# pragma mark - tableviewcelldelegate
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    //subway and bus cells only
+    if (indexPath.row == 2 || indexPath.row == 3){
+        
+        UILabel* stretchLabel;
+        switch (indexPath.row) {
+            case 2:
+                stretchLabel = busLabel;
+                break;
+            case 3:
+                stretchLabel = subwayLabel;
+            default:
+                break;
+        }
+        CGSize constraintSize = CGSizeMake(200.0f, MAXFLOAT);
+        CGSize labelSize = [stretchLabel.text sizeWithFont:[UIFont systemFontOfSize:12]
+                            constrainedToSize:constraintSize lineBreakMode:NSLineBreakByWordWrapping];
+            
+        return fmax(labelSize.height+20,44.0);
+    }
+    return 44.0;
+}
 @end

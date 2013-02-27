@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Station.h"
 
-@interface StationViewController : UITableViewController <MKMapViewDelegate>
+@interface StationViewController : UITableViewController <MKMapViewDelegate, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *addressLabel;
 @property (strong, nonatomic) IBOutlet UILabel *busLabel;

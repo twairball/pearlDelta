@@ -235,7 +235,6 @@
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PearlDelta.sqlite"];
-    //NSLog(@"url: %@", storeURL);
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     

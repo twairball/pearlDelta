@@ -47,8 +47,7 @@
         //schedule TBD
         self.scheduleLabel.text = route.schedule;
         self.scheduleLabel.numberOfLines = 0;
-                
-        //cell.textLabel.numberOfLines = 0; cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+     
         self.departStationLabel.text = route.departStation.name;
         self.arrivalStationLabel.text = route.arrivalStation.name;
         
@@ -77,6 +76,18 @@
 
 #pragma mark - Table view delegate
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        //schedule cell only
+        CGRect oldFrame = self.scheduleLabel.frame;
+        CGSize maximumLabelSize = CGSizeMake(oldFrame.size.width, FLT_MAX);
+        CGSize expectedLabelSize = [route.schedule sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:maximumLabelSize lineBreakMode:NSLineBreakByWordWrapping];
+        //adjust the label the the new height.
+        self.scheduleLabel.frame = CGRectMake(oldFrame.origin.x, oldFrame.origin.y, oldFrame.size.width, expectedLabelSize.height);
+        
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger section = [indexPath section];
@@ -90,13 +101,39 @@
                 case 1: [self performSegueWithIdentifier:@"stationAddress" sender:route.arrivalStation];
                     break;
             }
+            break;
         case 2:
             switch(row) {
-                case 1:[[UIApplication sharedApplication] openURL:[NSURL URLWithString:route.operator.tel]];
+                case 1: [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", [self validTelNumFromString:route.operator.tel] ]]];
                     break;
                 case 2:[[UIApplication sharedApplication] openURL:[NSURL URLWithString:route.operator.website]];
                     break;
             }
+            break;
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    // route cell only
+    if (indexPath.section ==0 && indexPath.row == 0 ) {
+        return 84.0;
+    } else if (indexPath.section == 0 && indexPath.row == 1){
+        // for the schedule cell only
+        UILabel* stretchLabel = scheduleLabel;
+        CGSize constraintSize = CGSizeMake(260.0f, MAXFLOAT);
+        CGSize labelSize = [stretchLabel.text sizeWithFont:[UIFont systemFontOfSize:12]
+                                         constrainedToSize:constraintSize lineBreakMode:NSLineBreakByWordWrapping];
+        
+        return fmax(labelSize.height+20,44.0);
+    } 
+    return 44.0;
+}
+
+
+- (NSString*)validTelNumFromString:(NSString*)thisString {
+    NSCharacterSet* phoneChars = [NSCharacterSet characterSetWithCharactersInString:@"+0123456789"];
+    return [[route.operator.tel componentsSeparatedByCharactersInSet:[phoneChars invertedSet]] componentsJoinedByString:@""];
+    
 }
 @end

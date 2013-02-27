@@ -42,8 +42,6 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
-    
-    NSLog(@"fetch count: %d", [[[self fetchedResultsController] fetchedObjects] count]);
     noResultsToDisplay = (BOOL)([[[self fetchedResultsController] fetchedObjects] count] == 0);
         
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
