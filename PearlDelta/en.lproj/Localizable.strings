@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  PearlDelta
+
+  Created by JERRY LIU on 30/3/13.
+  Copyright (c) 2013 com.genmk. All rights reserved.
+*/
+
+"INIT_DEPART_CITY" = "Hong Kong";
+"INIT_ARRIVAL_CITY" = "Dongguan";
+"MINS" = "Mins";
+"MAP_NOT_FOUND_TITLE" = "Can't find location";
+"MAP_NOT_FOUND_MSG" = "Sorry, but map co-ordinates are not always available for train stations and ferry ports in China (seriously).";
+"MAP_NOT_FOUND_BTN" = "OK Thanks";
+"TRAIN" = "Train";
+"FERRY" = "Ferry";
+"NO_RESULTS_CELL" = "No routes found...";

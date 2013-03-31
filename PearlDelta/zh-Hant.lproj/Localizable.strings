@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  PearlDelta
+
+  Created by JERRY LIU on 30/3/13.
+  Copyright (c) 2013 com.genmk. All rights reserved.
+*/
+
+"INIT_DEPART_CITY" = "香港";
+"INIT_ARRIVAL_CITY" = "東莞";
+"MINS" = "分鐘";
+"MAP_NOT_FOUND_TITLE" = "找不到地点!";
+"MAP_NOT_FOUND_MSG" = "抱歉，國內車站及碼頭的地理座標實在不容易找(真的)";
+"MAP_NOT_FOUND_BTN" = "知道了!";
+"TRAIN" = "火車";
+"FERRY" = "渡船";
+"NO_RESULTS_CELL" = "沒有找到路線";

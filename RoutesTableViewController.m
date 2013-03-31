@@ -55,6 +55,10 @@
     self.title = [NSString stringWithFormat:@"%@ - %@",self.departCity, self.arrivalCity];
 }
 
+- (void)viewWillAppear:(BOOL)animated  {
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
 - (void)viewDidUnload {
     self.fetchedResultsController = nil;
 }
@@ -131,7 +135,7 @@
     
     departStationLabel.text = route.departStation.name;
     arrivalStationLabel.text = route.arrivalStation.name;
-    durationLabel.text = [NSString stringWithFormat:@"%@分", route.duration];
+    durationLabel.text = [NSString stringWithFormat:@"%@%@", route.duration,NSLocalizedString(@"MINS", nil)];
     priceLabel.text = [NSString stringWithFormat:@"$%@", route.price];
     travelByIcon.image = [UIImage imageNamed:route.travelBy];
 }
@@ -154,7 +158,7 @@
     UITableViewCell *cell;
     if (noResultsToDisplay && indexPath.row == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"noResultsCell" forIndexPath:indexPath];
-        cell.textLabel.text = @"没有找到路线...";
+        cell.textLabel.text = NSLocalizedString(@"NO_RESULTS_CELL", nil);
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"routeCell" forIndexPath:indexPath];
         // Configure the cell...
@@ -178,9 +182,9 @@
     
     NSString* title;
     if ([[sectionInfo name] isEqualToString:@"train"]) {
-        title = @"火车";
+        title = NSLocalizedString(@"TRAIN", nil);
     } else if ([[sectionInfo name] isEqualToString:@"ferry"]) {
-        title = @"渡船";
+        title = NSLocalizedString(@"FERRY", nil);
     } else {
         title = [sectionInfo name];
     }

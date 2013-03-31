@@ -28,6 +28,10 @@
     [self updateLabels];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -58,7 +62,8 @@
 }
 
 - (void)setDefaults {
-    trip = [[Trip alloc] initWithDepartCity:@"香港" arrivalCity: @"東莞"];
+    trip = [[Trip alloc] initWithDepartCity:NSLocalizedString(@"INIT_DEPART_CITY", nil)
+                                arrivalCity: NSLocalizedString(@"INIT_ARRIVAL_CITY", nil)];
 }
 
 - (void)updateLabels {

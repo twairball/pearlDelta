@@ -233,6 +233,21 @@
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
+    NSArray *languagesArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
+    NSString *currentLanguage = [languagesArray objectAtIndex:0];
+    
+    NSString *pathComponent = [NSString stringWithFormat:@"%@.lproj/PearlDelta.sqlite", currentLanguage];
+    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:pathComponent];
+    NSString *activePathComponent = nil; // This will store the active language file
+    
+    NSLog(@"path component: %@", pathComponent);
+    // Check if the file exists...
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        activePathComponent = pathComponent;
+    } else {
+        activePathComponent = [[NSString alloc] stringByAppendingPathComponent:@"en.lproj/PearlDelta.sqlite"]; // Fallback
+    }
+    NSLog(@"active path component: %@", activePathComponent);
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PearlDelta.sqlite"];
     
@@ -240,7 +255,10 @@
     
     // If the expected store doesn't exist, copy the default store.
     if (![fileManager fileExistsAtPath:[storeURL path]]) {
-        NSURL *defaultStoreURL = [[NSBundle mainBundle] URLForResource:@"PearlDelta" withExtension:@"sqlite"];
+//        NSURL *defaultStoreURL = [[NSBundle mainBundle] URLForResource:@"PearlDelta" withExtension:@"sqlite"];
+        NSURL* defaultStoreURL = [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:activePathComponent];
+        
+        NSLog(@"file doesnt exist, load defaultStoreURL: %@", defaultStoreURL);
         if (defaultStoreURL) {
             [fileManager copyItemAtURL:defaultStoreURL toURL:storeURL error:NULL];
         }

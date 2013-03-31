@@ -59,7 +59,11 @@
         [self.mapView addAnnotation:self.station];
         [self.mapView selectAnnotation:self.station animated:YES];
     } else {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"找不到地点！" message:@"抱歉，國內車站及碼頭的地理座標實在不容易找(真的)" delegate:nil cancelButtonTitle:@"知道了!" otherButtonTitles:nil, nil];
+        NSString* title = NSLocalizedString(@"MAP_NOT_FOUND_TITLE", nil);
+        NSString* message = NSLocalizedString(@"MAP_NOT_FOUND_MSG", nil);
+        NSString* btnText = NSLocalizedString(@"MAP_NOT_FOUND_BTN", nil);
+        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:btnText otherButtonTitles:nil, nil];
         [alert show];
     }
 }

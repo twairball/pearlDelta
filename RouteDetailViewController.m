@@ -42,7 +42,7 @@
     if (self.route) {
         self.departLabel.text = route.departStation.name;
         self.arrivalLabel.text = route.arrivalStation.name;
-        self.durationLabel.text = [NSString stringWithFormat:@"%@分鐘", route.duration];
+        self.durationLabel.text = [NSString stringWithFormat:@"%@%@", route.duration, NSLocalizedString(@"MINS", nil)];
         self.travelByIcon.image =  [UIImage imageNamed:route.travelBy];
         //schedule TBD
         self.scheduleLabel.text = route.schedule;
