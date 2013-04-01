@@ -17,5 +17,6 @@
 -(NSArray*)cityListForArrival;
 -(NSArray*)cityListForDeparture;
 +(NSMutableArray*)cityList;
++(NSMutableArray*)cityListForLanguage:(NSString*)lang;
 
 @end

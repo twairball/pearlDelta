@@ -33,7 +33,23 @@
 }
 
 +(NSMutableArray*)cityList {
-    NSMutableArray* cityList = [NSMutableArray arrayWithObjects:@"香港", @"廣州", @"深圳", @"中山", @"東莞", @"珠海", @"澳門",nil];
+    
+    NSArray *languagesArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
+    NSString *currentLanguage = [languagesArray objectAtIndex:0];
+
+    return [Trip cityListForLanguage:currentLanguage];
+}
+
++(NSMutableArray*)cityListForLanguage:(NSString*)lang {
+    NSMutableArray* cityList = nil;
+    NSLog(@"cityListForLanguage: %@", lang);
+    
+    if ([lang isEqualToString:@"en"]) {
+        cityList = [NSMutableArray arrayWithObjects:@"Hong Kong", @"Guangzhou", @"Shenzhen", @"Zhongshan", @"Dongguan", @"Zhuhai", @"Macau", nil];
+    } else {
+        cityList = [NSMutableArray arrayWithObjects:@"香港", @"廣州", @"深圳", @"中山", @"東莞", @"珠海", @"澳門",nil];
+    }
     return cityList;
 }
+
 @end
