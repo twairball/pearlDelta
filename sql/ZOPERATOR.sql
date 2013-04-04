@@ -1,0 +1,12 @@
+BEGIN TRANSACTION;
+INSERT INTO "ZOPERATOR" VALUES(1,1,1,'Chu Kong Passenger Transport Co Ltd',NULL,'http://www.cksp.com.hk/');
+INSERT INTO "ZOPERATOR" VALUES(2,1,1,'GZ Panyu Nansha Port Passenger Transport','+86 (020) 84688256','http://www.nskyg.com/');
+INSERT INTO "ZOPERATOR" VALUES(3,1,1,'Kowloon-Canton Railway Corporation (KCRC)','+86 (852) 26881333','http://www.kcrc.com/');
+INSERT INTO "ZOPERATOR" VALUES(4,1,1,'Merchant Shekou Ferry Terminal Co Ltd','+86 (0755) 26695600','http://www.szgky.com/');
+INSERT INTO "ZOPERATOR" VALUES(5,1,1,'Shun Tak-China Travel Ship Management Ltd','+852 23070880','http://www.turbojet.com.hk/');
+INSERT INTO "ZOPERATOR" VALUES(6,1,1,'Guangshen Railway Co Ltd','+86 (0755) 25587920','http://www.gsrc.com/');
+INSERT INTO "ZOPERATOR" VALUES(7,1,1,'GZ Railway (Group) Corporation','+86 (020) 12306','http://www.gzrailway.com.cn/');
+INSERT INTO "ZOPERATOR" VALUES(8,1,1,'Zhuhai Macau Ferry Co Ltd','+86 (0756) 8823460',NULL);
+INSERT INTO "ZOPERATOR" VALUES(9,1,1,'Cotai Ferry Co. Ltd','+852 23599990','http://cotaijet.com.mo/');
+INSERT INTO "ZOPERATOR" VALUES(10,1,1,'New World First Ferry Services (Macau) Ltd','+852 21318181','http://www.nwff.com.hk/');
+COMMIT;

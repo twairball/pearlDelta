@@ -60,8 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1106C9A816CA2B1300B288C7 /* RoutesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoutesTableViewController.h; path = ../RoutesTableViewController.h; sourceTree = "<group>"; };
-		1106C9A916CA2B1300B288C7 /* RoutesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoutesTableViewController.m; path = ../RoutesTableViewController.m; sourceTree = "<group>"; };
+		1106C9A816CA2B1300B288C7 /* RoutesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesTableViewController.h; sourceTree = "<group>"; };
+		1106C9A916CA2B1300B288C7 /* RoutesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesTableViewController.m; sourceTree = "<group>"; };
 		1106C9B116CA438700B288C7 /* PearlDelta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PearlDelta.xcdatamodel; sourceTree = "<group>"; };
 		1106C9FB16CB91C200B288C7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1164750D16CBD601007C21F3 /* Operator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operator.h; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 		1179B77C16C4AAC200146D28 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1179B77E16C4AAC200146D28 /* PearlDeltaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PearlDeltaViewController.h; sourceTree = "<group>"; };
 		1179B77F16C4AAC200146D28 /* PearlDeltaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PearlDeltaViewController.m; sourceTree = "<group>"; };
-		1179B78616C4AB7000146D28 /* CityPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityPickerViewController.h; path = ../CityPickerViewController.h; sourceTree = "<group>"; };
-		1179B78716C4AB7000146D28 /* CityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityPickerViewController.m; path = ../CityPickerViewController.m; sourceTree = "<group>"; };
+		1179B78616C4AB7000146D28 /* CityPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerViewController.h; sourceTree = "<group>"; };
+		1179B78716C4AB7000146D28 /* CityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerViewController.m; sourceTree = "<group>"; };
 		1179B78916C81B1900146D28 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
 		1179B78A16C81B1900146D28 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
 		1179B78D16C8DD1000146D28 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		11AA6BE21706D81700B43F26 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		11AA6BE41706D87C00B43F26 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hant"; path = "zh-Hant.lproj/PearlDelta.sqlite"; sourceTree = "<group>"; };
 		11AA6BE61706D88000B43F26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/PearlDelta.sqlite; sourceTree = "<group>"; };
-		11AB8A8F16CDE5B1002BDDA2 /* RouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RouteDetailViewController.h; path = ../RouteDetailViewController.h; sourceTree = "<group>"; };
-		11AB8A9016CDE5B1002BDDA2 /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RouteDetailViewController.m; path = ../RouteDetailViewController.m; sourceTree = "<group>"; };
+		11AB8A8F16CDE5B1002BDDA2 /* RouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteDetailViewController.h; sourceTree = "<group>"; };
+		11AB8A9016CDE5B1002BDDA2 /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailViewController.m; sourceTree = "<group>"; };
 		11AB8A9316D0E968002BDDA2 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		11AB8A9416D0E968002BDDA2 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		11AB8A9E16D12C5B002BDDA2 /* ferry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ferry@2x.png"; sourceTree = "<group>"; };
@@ -120,13 +120,16 @@
 		11AB8AB016D13941002BDDA2 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		11AB8ABA16D1CE94002BDDA2 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		11AB8ABB16D1CE94002BDDA2 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
-		11AB8ABE16D1DDE4002BDDA2 /* StationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StationViewController.h; path = ../StationViewController.h; sourceTree = "<group>"; };
-		11AB8ABF16D1DDE4002BDDA2 /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StationViewController.m; path = ../StationViewController.m; sourceTree = "<group>"; };
+		11AB8ABE16D1DDE4002BDDA2 /* StationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationViewController.h; sourceTree = "<group>"; };
+		11AB8ABF16D1DDE4002BDDA2 /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationViewController.m; sourceTree = "<group>"; };
 		11AB8AC216D1E7EF002BDDA2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		11AB8AC416D3355A002BDDA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		11AB8AC916D3648B002BDDA2 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
 		11AB8ACA16D3648B002BDDA2 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
-		11CBE05416D5A5F500D3F639 /* PearlDelta.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PearlDelta.sqlite; sourceTree = "<group>"; };
+		11C768AF170E01D0004A21F1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/PearlDelta.sqlite"; sourceTree = "<group>"; };
+		11C768B1170E01D0004A21F1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		11C768B2170E01D0004A21F1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		11C768B3170E01D0004A21F1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,7 @@
 				1179B78A16C81B1900146D28 /* Trip.m */,
 			);
 			name = Models;
+			path = PearlDelta/models;
 			sourceTree = "<group>";
 		};
 		1179B75716C4AAC200146D28 = {
@@ -167,9 +171,9 @@
 				11AA6BE51706D87C00B43F26 /* PearlDelta.sqlite */,
 				1179B77216C4AAC200146D28 /* PearlDeltaAppDelegate.h */,
 				1179B77316C4AAC200146D28 /* PearlDeltaAppDelegate.m */,
-				11CBE05416D5A5F500D3F639 /* PearlDelta.sqlite */,
 				1179B77B16C4AAC200146D28 /* MainStoryboard.storyboard */,
 				1106C9B016CA438700B288C7 /* PearlDelta.xcdatamodeld */,
+				1179B76A16C4AAC200146D28 /* Supporting Files */,
 				1106C9AF16CA2B6800B288C7 /* Models */,
 				1179B76916C4AAC200146D28 /* Controllers */,
 				11AB8AB916D13949002BDDA2 /* Icon */,
@@ -213,10 +217,9 @@
 				11AB8A9016CDE5B1002BDDA2 /* RouteDetailViewController.m */,
 				11AB8ABE16D1DDE4002BDDA2 /* StationViewController.h */,
 				11AB8ABF16D1DDE4002BDDA2 /* StationViewController.m */,
-				1179B76A16C4AAC200146D28 /* Supporting Files */,
 			);
 			name = Controllers;
-			path = PearlDelta;
+			path = PearlDelta/controllers;
 			sourceTree = "<group>";
 		};
 		1179B76A16C4AAC200146D28 /* Supporting Files */ = {
@@ -232,6 +235,7 @@
 				11AA6BDF1706D74000B43F26 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
+			path = PearlDelta;
 			sourceTree = "<group>";
 		};
 		1179B79D16C8DD3C00146D28 /* images */ = {
@@ -253,6 +257,7 @@
 				1179B79016C8DD1100146D28 /* orangeButtonHighlight@2x.png */,
 			);
 			name = images;
+			path = PearlDelta/images;
 			sourceTree = "<group>";
 		};
 		11AB8AB916D13949002BDDA2 /* Icon */ = {
@@ -270,6 +275,7 @@
 				11AB8AB016D13941002BDDA2 /* iTunesArtwork.png */,
 			);
 			name = Icon;
+			path = PearlDelta/images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +315,7 @@
 			knownRegions = (
 				en,
 				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = 1179B75716C4AAC200146D28;
 			productRefGroup = 1179B76116C4AAC200146D28 /* Products */;
@@ -390,6 +397,7 @@
 			children = (
 				1179B76D16C4AAC200146D28 /* en */,
 				11AA6BE11706D81700B43F26 /* zh-Hant */,
+				11C768B2170E01D0004A21F1 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -399,6 +407,7 @@
 			children = (
 				1179B77C16C4AAC200146D28 /* en */,
 				11AA6BE01706D81700B43F26 /* zh-Hant */,
+				11C768B1170E01D0004A21F1 /* zh-Hans */,
 			);
 			name = MainStoryboard.storyboard;
 			path = PearlDelta;
@@ -409,6 +418,7 @@
 			children = (
 				11AA6BDE1706D74000B43F26 /* en */,
 				11AA6BE21706D81700B43F26 /* zh-Hant */,
+				11C768B3170E01D0004A21F1 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -418,8 +428,10 @@
 			children = (
 				11AA6BE41706D87C00B43F26 /* zh-Hant */,
 				11AA6BE61706D88000B43F26 /* en */,
+				11C768AF170E01D0004A21F1 /* zh-Hans */,
 			);
 			name = PearlDelta.sqlite;
+			path = PearlDelta;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -499,12 +511,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jerry Liu";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PearlDelta/PearlDelta-Prefix.pch";
 				INFOPLIST_FILE = "PearlDelta/PearlDelta-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "B7474E77-0338-4AE7-9EA6-157C90A23172";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

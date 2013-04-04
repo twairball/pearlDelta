@@ -245,11 +245,13 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
         activePathComponent = pathComponent;
     } else {
-        activePathComponent = [[NSString alloc] stringByAppendingPathComponent:@"en.lproj/PearlDelta.sqlite"]; // Fallback
+        activePathComponent = @"en.lproj/PearlDelta.sqlite"; // Fallback
     }
     NSLog(@"active path component: %@", activePathComponent);
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PearlDelta.sqlite"];
+//    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PearlDelta.sqlite"];
+    NSURL *storeURL = [[NSBundle mainBundle] URLForResource:@"PearlDelta" withExtension:@".sqlite" subdirectory:nil localization:currentLanguage];
+    NSLog(@"storeURL: %@", storeURL);
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     

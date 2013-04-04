@@ -78,6 +78,7 @@
     //fetch predicate based on request variables
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"departCity == %@ AND arrivalCity == %@",
                               self.departCity, self.arrivalCity];
+    NSLog(@"predicate: %@", predicate);
     [fetchRequest setPredicate:predicate];
     
     NSSortDescriptor *departStationSort = [[NSSortDescriptor alloc]

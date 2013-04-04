@@ -5,15 +5,16 @@
   Created by JERRY LIU on 30/3/13.
   Copyright (c) 2013 com.genmk. All rights reserved.
  
-  繁體中文 zh-Hant
- */
+  简体中文 zh-Hans
+*/
 
 "INIT_DEPART_CITY" = "香港";
 "INIT_ARRIVAL_CITY" = "東莞";
-"MINS" = "分鐘";
-"MAP_NOT_FOUND_TITLE" = "找不到地點!";
-"MAP_NOT_FOUND_MSG" = "抱歉，國內車站及碼頭的地理座標實在不容易找(真的)";
+"MINS" = "分钟";
+"MAP_NOT_FOUND_TITLE" = "找不到地点!";
+"MAP_NOT_FOUND_MSG" = "抱歉，国内车站及码头的地点坐标实在不容易找(真的)";
 "MAP_NOT_FOUND_BTN" = "知道了!";
-"TRAIN" = "火車";
+"TRAIN" = "火车";
 "FERRY" = "渡船";
-"NO_RESULTS_CELL" = "沒有找到路線";
+"NO_RESULTS_CELL" = "没有找到路线";
+

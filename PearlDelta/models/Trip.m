@@ -44,10 +44,11 @@
     NSMutableArray* cityList = nil;
     NSLog(@"cityListForLanguage: %@", lang);
     
-    if ([lang isEqualToString:@"en"]) {
-        cityList = [NSMutableArray arrayWithObjects:@"Hong Kong", @"Guangzhou", @"Shenzhen", @"Zhongshan", @"Dongguan", @"Zhuhai", @"Macau", nil];
-    } else {
+    // zh-Hans and zh-Hant both share same sqlite db for now...
+    if ([lang isEqualToString:@"zh-Hans"] || [lang isEqualToString:@"zh-Hant"]) {
         cityList = [NSMutableArray arrayWithObjects:@"香港", @"廣州", @"深圳", @"中山", @"東莞", @"珠海", @"澳門",nil];
+    } else {
+        cityList = [NSMutableArray arrayWithObjects:@"Hong Kong", @"Guangzhou", @"Shenzhen", @"Zhongshan", @"Dongguan", @"Zhuhai", @"Macau", nil];
     }
     return cityList;
 }
